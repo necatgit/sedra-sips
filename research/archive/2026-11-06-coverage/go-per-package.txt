@@ -1,0 +1,198 @@
+go: downloading github.com/pkg/errors v0.9.1
+go: downloading github.com/davecgh/go-spew v1.1.1
+go: downloading github.com/jessevdk/go-flags v1.4.0
+go: downloading google.golang.org/protobuf v1.28.1
+go: downloading google.golang.org/grpc v1.38.0
+go: downloading github.com/sedracoin/go-secp256k1 v1.0.2
+go: downloading github.com/tyler-smith/go-bip39 v1.1.0
+go: downloading golang.org/x/exp v0.0.0-20220414153411-bcd21879b8fd
+go: downloading github.com/gofrs/flock v0.8.1
+go: downloading golang.org/x/crypto v0.1.0
+go: downloading github.com/btcsuite/btcutil v1.0.2
+go: downloading golang.org/x/term v0.5.0
+go: downloading github.com/golang/protobuf v1.5.2
+go: downloading github.com/sedracoin/go-muhash v1.0.1
+go: downloading github.com/btcsuite/go-socks v0.0.0-20170105172521-4720035b7bfd
+go: downloading github.com/jrick/logrotate v1.0.0
+go: downloading github.com/syndtr/goleveldb v1.0.1-0.20190923125748-758128399b1d
+go: downloading golang.org/x/net v0.7.0
+go: downloading google.golang.org/genproto v0.0.0-20210604141403-392c879c8b08
+go: downloading golang.org/x/sys v0.5.0
+go: downloading github.com/golang/snappy v0.0.1
+go: downloading golang.org/x/text v0.7.0
+# github.com/sedracoin/sedrad/domain/consensus/datastructures/headersselectedchainstore
+domain/consensus/datastructures/headersselectedchainstore/headers_selected_chain_staging_shard.go:85:3: redundant or: len(hscss.addedByIndex) != 0 || len(hscss.addedByIndex) != 0
+	github.com/sedracoin/sedrad		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/app		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/app/appmessage	0.011s	coverage: 20.4% of statements
+	github.com/sedracoin/sedrad/app/protocol		coverage: 0.0% of statements
+?   	github.com/sedracoin/sedrad/app/protocol/common	[no test files]
+	github.com/sedracoin/sedrad/app/protocol/flowcontext		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/app/protocol/flows/handshake		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/app/protocol/flows/ready		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/app/protocol/flows/v5		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/app/protocol/flows/v5/addressexchange		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/app/protocol/flows/v5/blockrelay	0.029s	coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/app/protocol/flows/v5/ping		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/app/protocol/flows/v5/rejects		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/app/protocol/flows/v5/testing	0.030s	coverage: [no statements]
+ok  	github.com/sedracoin/sedrad/app/protocol/flows/v5/transactionrelay	0.887s	coverage: 61.1% of statements
+	github.com/sedracoin/sedrad/app/protocol/peer		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/app/protocol/protocolerrors		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/app/rpc		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/app/rpc/rpccontext		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/app/rpc/rpchandlers	0.225s	coverage: 4.2% of statements
+	github.com/sedracoin/sedrad/cmd/genkeypair		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/cmd/sedractl		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/cmd/sedraminer		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/cmd/sedraminer/templatemanager		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/cmd/sedrawallet		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/cmd/sedrawallet/daemon/client		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/cmd/sedrawallet/daemon/pb		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/cmd/sedrawallet/daemon/server	0.095s	coverage: 2.2% of statements
+	github.com/sedracoin/sedrad/cmd/sedrawallet/keys		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/cmd/sedrawallet/libsedrawallet	0.361s	coverage: 65.7% of statements
+ok  	github.com/sedracoin/sedrad/cmd/sedrawallet/libsedrawallet/bip32	0.094s	coverage: 78.2% of statements
+ok  	github.com/sedracoin/sedrad/cmd/sedrawallet/libsedrawallet/bip32/base58	0.006s	coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/cmd/sedrawallet/libsedrawallet/serialization		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/cmd/sedrawallet/libsedrawallet/serialization/protoserialization		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/cmd/sedrawallet/utils	0.005s	coverage: 65.5% of statements
+ok  	github.com/sedracoin/sedrad/domain	1.497s	coverage: 29.4% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus	1.692s	coverage: 33.3% of statements
+	github.com/sedracoin/sedrad/domain/consensus/database		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/database/binaryserialization		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/database/serialization	0.007s	coverage: 0.8% of statements
+	github.com/sedracoin/sedrad/domain/consensus/datastructures/acceptancedatastore		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/datastructures/blockheaderstore		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/datastructures/blockrelationstore		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/datastructures/blockstatusstore		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/datastructures/blockstore		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/datastructures/blockwindowheapslicestore		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/datastructures/consensusstatestore		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/datastructures/daablocksstore		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/datastructures/daawindowstore		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/datastructures/finalitystore		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/datastructures/ghostdagdatastore		coverage: 0.0% of statements
+FAIL	github.com/sedracoin/sedrad/domain/consensus/datastructures/headersselectedchainstore [build failed]
+	github.com/sedracoin/sedrad/domain/consensus/datastructures/headersselectedtipstore		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/datastructures/mergedepthrootstore		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/datastructures/multisetstore		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/datastructures/pruningstore		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/datastructures/reachabilitydatastore		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/datastructures/utxodiffstore		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/model	0.008s	coverage: 24.2% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/model/externalapi	0.004s	coverage: 51.9% of statements
+?   	github.com/sedracoin/sedrad/domain/consensus/model/testapi	[no test files]
+ok  	github.com/sedracoin/sedrad/domain/consensus/processes/blockbuilder	0.050s	coverage: 15.5% of statements
+	github.com/sedracoin/sedrad/domain/consensus/processes/blockparentbuilder		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/processes/blockprocessor	0.480s	coverage: 76.4% of statements
+	github.com/sedracoin/sedrad/domain/consensus/processes/blockprocessor/blocklogger		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/processes/blockvalidator	1.984s	coverage: 82.5% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/processes/coinbasemanager	0.056s	coverage: 62.2% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/processes/consensusstatemanager	3.231s	coverage: 68.7% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/processes/dagtopologymanager	0.111s	coverage: 52.9% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/processes/dagtraversalmanager	0.252s	coverage: 68.0% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/processes/difficultymanager	17.619s	coverage: 61.1% of statements
+	github.com/sedracoin/sedrad/domain/consensus/processes/finalitymanager		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/processes/ghostdag2		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/processes/ghostdagmanager	0.050s	coverage: 69.6% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/processes/headersselectedtipmanager	0.182s	coverage: 75.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/processes/mergedepthmanager		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/processes/parentsmanager		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/processes/pastmediantimemanager	1.740s	coverage: 78.6% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/processes/pruningmanager	26.195s	coverage: 50.6% of statements
+	github.com/sedracoin/sedrad/domain/consensus/processes/pruningproofmanager		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/processes/reachabilitymanager	47.046s	coverage: 79.5% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/processes/syncmanager	0.561s	coverage: 51.9% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/processes/transactionvalidator	0.199s	coverage: 78.6% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/ruleerrors	0.022s	coverage: 76.9% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/utils/blockheader	0.014s	coverage: 71.2% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/utils/consensushashing	0.041s	coverage: 62.4% of statements
+?   	github.com/sedracoin/sedrad/domain/consensus/utils/constants	[no test files]
+ok  	github.com/sedracoin/sedrad/domain/consensus/utils/hashes	0.010s	coverage: 50.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/utils/hashset		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/utils/lrucache		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/utils/lrucacheghostdagdata		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/utils/lrucachehashandwindowsizetoblockghostdagdatahashpairs		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/utils/lrucachehashpairtoblockghostdagdatahashpair		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/utils/lrucacheuint64tohash		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/utils/merkle		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/utils/mining		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/utils/multiset		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/utils/pow	0.014s	coverage: 61.5% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/utils/reachabilitydata	0.010s	coverage: 72.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/utils/serialization		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/utils/sorters		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/utils/subnetworks		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/utils/testutils		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/utils/transactionhelper		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/utils/transactionid		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/utils/txscript	0.280s	coverage: 78.0% of statements
+ok  	github.com/sedracoin/sedrad/domain/consensus/utils/utxo	0.010s	coverage: 47.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/utils/utxolrucache		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensus/utils/virtual		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/consensusreference		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/domain/dagconfig	0.007s	coverage: 76.9% of statements
+ok  	github.com/sedracoin/sedrad/domain/miningmanager	1.104s	coverage: 67.6% of statements
+	github.com/sedracoin/sedrad/domain/miningmanager/blocktemplatebuilder		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/domain/miningmanager/mempool	0.134s	coverage: 6.1% of statements
+	github.com/sedracoin/sedrad/domain/miningmanager/mempool/model		coverage: 0.0% of statements
+?   	github.com/sedracoin/sedrad/domain/miningmanager/model	[no test files]
+	github.com/sedracoin/sedrad/domain/prefixmanager		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/domain/prefixmanager/prefix		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/domain/utxoindex	0.035s	coverage: 5.2% of statements
+ok  	github.com/sedracoin/sedrad/infrastructure/config	0.024s	coverage: 2.4% of statements
+ok  	github.com/sedracoin/sedrad/infrastructure/db/database	0.095s	coverage: 89.5% of statements
+ok  	github.com/sedracoin/sedrad/infrastructure/db/database/ldb	0.112s	coverage: 78.6% of statements
+	github.com/sedracoin/sedrad/infrastructure/logger		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/infrastructure/network/addressmanager	0.093s	coverage: 60.0% of statements
+	github.com/sedracoin/sedrad/infrastructure/network/connmanager		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/infrastructure/network/dnsseed		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/infrastructure/network/dnsseed/pb		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/infrastructure/network/netadapter	0.044s	coverage: 62.2% of statements
+	github.com/sedracoin/sedrad/infrastructure/network/netadapter/id		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/infrastructure/network/netadapter/router		coverage: 0.0% of statements
+?   	github.com/sedracoin/sedrad/infrastructure/network/netadapter/server	[no test files]
+	github.com/sedracoin/sedrad/infrastructure/network/netadapter/server/grpcserver		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/infrastructure/network/netadapter/server/grpcserver/protowire		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/infrastructure/network/netadapter/standalone		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/infrastructure/network/rpcclient		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/infrastructure/network/rpcclient/grpcclient		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/infrastructure/os/execenv		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/infrastructure/os/limits		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/infrastructure/os/signal		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/infrastructure/os/winservice		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/stability-tests/application-level-garbage		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/stability-tests/common		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/stability-tests/common/mine		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/stability-tests/common/rpc		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/stability-tests/daa	0.029s	coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/stability-tests/infra-level-garbage		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/stability-tests/many-tips		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/stability-tests/mempool-limits	0.031s	coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/stability-tests/minejson		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/stability-tests/netsync		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/stability-tests/netsync/chain_generator		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/stability-tests/netsync/fast-pruning-ibd-test	0.020s	coverage: [no statements]
+	github.com/sedracoin/sedrad/stability-tests/orphans		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/stability-tests/reorg		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/stability-tests/rpc-idle-clients		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/stability-tests/rpc-stability		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/stability-tests/sedradsanity		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/stability-tests/simple-sync		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/testing/integration	41.885s	coverage: [no statements]
+ok  	github.com/sedracoin/sedrad/util	0.009s	coverage: 92.5% of statements
+ok  	github.com/sedracoin/sedrad/util/bech32	0.017s	coverage: 100.0% of statements
+ok  	github.com/sedracoin/sedrad/util/binaryserializer	0.005s	coverage: 9.8% of statements
+ok  	github.com/sedracoin/sedrad/util/difficulty	0.041s	coverage: 79.6% of statements
+?   	github.com/sedracoin/sedrad/util/locks	[no test files]
+ok  	github.com/sedracoin/sedrad/util/math	0.006s	coverage: 66.7% of statements
+ok  	github.com/sedracoin/sedrad/util/mstime	0.006s	coverage: 50.0% of statements
+	github.com/sedracoin/sedrad/util/network		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/util/panics		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/util/profiling		coverage: 0.0% of statements
+ok  	github.com/sedracoin/sedrad/util/random	0.006s	coverage: 80.0% of statements
+	github.com/sedracoin/sedrad/util/staging		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/util/txmass		coverage: 0.0% of statements
+	github.com/sedracoin/sedrad/version		coverage: 0.0% of statements
+FAIL

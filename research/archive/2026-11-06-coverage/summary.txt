@@ -1,0 +1,11 @@
+== go 2026-11-06T06:38:41Z
+4a1153d
+go version go1.26.8 linux/amd64
+go per-package exit 1
+go coverpkg exit 1
+total:																					(statements)									51.0%
+== rust 2026-11-06T06:41:56Z
+e481e23
+cargo-llvm-cov 0.9.1
+rust llvm-cov exit 0
+== end 2026-11-06T06:52:33Z

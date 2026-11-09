@@ -7,7 +7,7 @@
 | Created | 2026-11-05 |
 | Type | Consensus (hard fork) |
 | Discussion | [Issues of this repository](https://github.com/necatgit/sedra-sips/issues) |
-| Based on | Research notes 0001 (relaunch review), 0002 (ZKas AuxPoW), 0004 (Rust path), 0005 (test coverage) of the sedra-merged-mining project; they will be published together with that project's repository |
+| Based on | Research notes [0002](research/0002-zkas-auxpow.md) (ZKas AuxPoW), [0004](research/0004-rust-path.md) (Rust path), [0005](research/0005-test-coverage.md) (test coverage); 0001 (review of the v2.0.0 relaunch) will be published later |
 
 Labels used for claims: **Verified** (checked in code or data, see the research notes named in each claim), **Inferred** (reasoned,
 could be wrong), **Unknown**. Design choices are marked **Proposed**: they are what this draft suggests and are open for

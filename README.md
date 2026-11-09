@@ -25,5 +25,5 @@ announcement of the activation date until 30 days after activation.
 This work is done together with an AI, and that is stated openly: **Claude** (by Anthropic, used through Claude Code)
 does most of the research, code and writing; Nec sets the goals, makes the decisions and reviews the results.
 
-The research notes, the roadmap and the Rust node code behind these proposals will be published in their own
-repositories.
+The research behind SIP-0001 is in [research/](research/). The roadmap and the Rust node code will be published in
+their own repositories.
