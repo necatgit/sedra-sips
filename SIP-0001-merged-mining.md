@@ -118,6 +118,10 @@ native Sedra block and the parent of another Sedra block (the ZKas double-credit
 Other chains' tags (for example ZKas's `ZKM1`, which Sedra blocks already carry when PuddlePool merge-mines ZKas on
 Sedra) remain allowed.
 
+The ban starts `2 × finality_depth` DAA score **before** the activation score (about 2 days on mainnet), not at it.
+Otherwise a block mined just before activation could carry the commitment of a block just after it and later serve as
+that block's parent, so one solution would again count twice. ZKas closed the same gap this way (decided 2026-11-10).
+
 ### 4.6 Kaspa header format
 
 The parent is a **current** Kaspa header. Kaspa moved to block version 2 with compressed parents after rusty-kaspa
@@ -146,6 +150,8 @@ proposal: no premine, no developer fee.
   team (decided 2026-11-09, Q33). The notice period should be as short as the operators can safely
   upgrade: the network has two or three pools and one exchange, so it is set together with them rather than fixed in
   weeks here.
+- The self-parent ban (4.5) starts `2 × finality_depth` before the activation score, so nodes and pools must run the
+  Rust node from that earlier point on, not only from activation.
 - A new P2P protocol version carries the witness field. After activation, nodes that do not understand AuxPoW (today's
   Go nodes) cannot validate merged-mined blocks and must be replaced by the Rust node. Before activation, the Rust node
   keeps protocol version 5 for compatibility with Go nodes.
