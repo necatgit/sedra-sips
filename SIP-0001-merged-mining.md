@@ -44,11 +44,12 @@ The rule change needs a node that can carry and check AuxPoW proofs. Sedra's cur
 Kaspa's Go node v0.12.15, which Kaspa no longer maintains (**Verified**, research 0004). This proposal therefore builds
 on the Sedra Rust node based on rusty-kaspa v1.0.1 that this project develops in step 1 (milestones M1-M9).
 
-Status on 2026-11-09 (**Verified**, evidence in the project's research archive): milestones M1-M8 are done. The Rust node
+Status on 2026-11-10 (**Verified**, evidence in the project's research archive): milestones M1-M8 are done. The Rust node
 carries Sedra's network, block rewards and both v2.0.0 relaunch rules, connects to Sedra's Go node over protocol
 version 5, syncs fully from a Go node and follows the tip (M5), matches the Go node's UTXO commitment and supply (M7),
-and mines blocks that the Go node accepts and vice versa (M8). The seven-day run next to a Go node (M9) is in progress
-until 2026-11-14. **This SIP cannot activate before step 1 is complete and the Rust node is in use by the network.**
+and mines blocks that the Go node accepts and vice versa (M8). Sedra's Go wallet daemon `sedrawallet` v2.0.0 works
+against it unchanged. The seven-day run next to a Go node (M9) is in progress until 2026-11-14, with no difference so
+far. **This SIP cannot activate before step 1 is complete and the Rust node is in use by the network.**
 
 ## 4. Specification (Proposed)
 
@@ -191,10 +192,27 @@ mined blocks remain valid on both sides until the first merged-mined block appea
 
 ## 9. Reference implementation and tests
 
-Not written yet. Planned in the Rust node (`necatgit/sedra-rusty`), milestone M10, porting about 1,200 lines of
-ZKas's AuxPoW core. Required tests: valid and invalid proofs, every rule in 4.4 broken one at a time, nonce binding,
-exactly-once and self-parent rules, size limits, real Kaspa headers as parents, the activation boundary, and fuzzing of
-the decoder. As in step 1, each test must be shown to fail when its rule is broken.
+Written and tested (2026-11-10), **not active**: branch `m10-auxpow` of the Rust node (`necatgit/sedra-rusty`,
+public from the step-1 release). The activation point is `never` on every network, so the code changes nothing until
+a value is agreed (section 5). Every rule has a test that feeds it input breaking that rule; the validation rules
+were also mutation-checked (the check removed, a test must then fail).
+
+- **Parent hashing:** 20 real Kaspa mainnet blocks re-hashed exactly as Kaspa does (headers, kHeavyHash, coinbase
+  hashes including the version-1 coinbases Kaspa uses since Toccata, Merkle branches).
+- **Proof rules (4.1-4.3):** every structural rule broken once on a real Kaspa block: missing or duplicate commitment,
+  wrong tag or length, nonce binding, Merkle branch, size limits, nested proofs.
+- **Validation (4.4, 4.5, 5):** parent work against the Sedra target, native-first dual acceptance, block level from
+  the parent's work, the activation boundary and the self-parent ban from 2 x finality depth before it, run through
+  the real consensus pipeline.
+- **Fuzzing:** deterministic fuzzing of the decoder, the checks, the PoW gate and the P2P and RPC conversions. It found
+  one free byte range (a cached hash field of the parent header that no rule reads); that field is now normalized.
+- **Network (4.7):** two nodes sync 240 blocks, half of them merged-mined, through P2P; a pruning proof with 319
+  merged-mined headers validates; a node without merged mining rejects merged-mined blocks and the proof.
+- **End to end:** on a local test network, a stratum miner mining through a pool (Miningcore with merged mining of
+  ZKas and Sedra) produced 401 of 401 accepted merged-mined Sedra blocks, relayed to a second node.
+
+Full test suite of the branch: 557 passed, 0 failed. Not tested yet: anything on a public network. That is the job of
+the public testnet before any activation.
 
 ## 10. Open questions
 
