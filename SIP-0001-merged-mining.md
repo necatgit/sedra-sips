@@ -63,7 +63,7 @@ hash and can be stripped by a relaying peer without changing the block's identit
 | Field | Content |
 |---|---|
 | `parent_header` | A Kaspa block header (current Kaspa header format, see 4.6) |
-| `parent_coinbase` | The parent block's coinbase transaction |
+| `parent_coinbase` | The parent block's coinbase transaction, hashed as Kaspa does today (transaction version 1 since Kaspa's Toccata fork); an unknown future version is not accepted, see 4.6 |
 | `coinbase_merkle_branch` | Merkle path from the coinbase (leaf 0) to the parent's `hash_merkle_root` |
 
 Serialization: Borsh, as in ZKas, so pools can reuse one serializer. Limits: branch length ≤ 64, serialized witness
