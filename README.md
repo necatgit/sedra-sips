@@ -5,6 +5,9 @@ Proposals for changes to the **Sedra (SDR)** network, published for public comme
 | SIP | Title | Status |
 |---|---|---|
 | [SIP-0001](SIP-0001-merged-mining.md) | Merged mining of Sedra with Kaspa | Draft, open for public comment |
+| [SIP-0003](SIP-0003-public-testnet.md) | A public testnet for merged mining | Draft, open for public comment |
+
+SIP-0002 (network resilience) is still an idea, not a full proposal; it will be published here when it is one.
 
 ## How to comment
 
@@ -19,7 +22,7 @@ A draft is not a decision. Nothing in these proposals is scheduled, and nothing 
 Written by **Nec** ([@necatgit](https://github.com/necatgit)), who also runs the PuddlePool mining pool.
 
 **Disclosure:** Nec holds about 250M SDR (roughly 1% of circulating supply) and has a direct interest in Sedra
-succeeding. SIP-0001 creates no new coins for Nec: no premine, no developer fee. Nec will not sell SDR from the public
+succeeding. Neither SIP-0001 nor SIP-0003 creates new coins for Nec: no premine, no developer fee. Nec will not sell SDR from the public
 announcement of the activation date until 30 days after activation.
 
 This work is done together with an AI, and that is stated openly: **Claude** (by Anthropic, used through Claude Code)
