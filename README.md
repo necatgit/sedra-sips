@@ -28,5 +28,6 @@ announcement of the activation date until 30 days after activation.
 This work is done together with an AI, and that is stated openly: **Claude** (by Anthropic, used through Claude Code)
 does most of the research, code and writing; Nec sets the goals, makes the decisions and reviews the results.
 
-The research behind SIP-0001 is in [research/](research/). The roadmap and the Rust node code will be published in
-their own repositories.
+The research behind SIP-0001 is in [research/](research/). The project's roadmap, all research (including the review of
+the v2.0.0 relaunch), questions and progress updates are in [necatgit/sedra-project](https://github.com/necatgit/sedra-project)
+(public since 2026-11-21); the Rust node code is in [necatgit/sedra-rusty](https://github.com/necatgit/sedra-rusty).

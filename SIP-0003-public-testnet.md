@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Status | **Draft, open for public comment** (since 2026-11-17). Q46-Q50 decided by Nec 2026-11-10; Q51 and Q52 asked to the Sedra team on 2026-11-10, **not answered yet (open)**. Not final, not scheduled, not agreed with the Sedra team |
+| Status | **Draft, open for public comment** (since 2026-11-17). Q46-Q50 decided by Nec 2026-11-10; Q51 and Q52 asked to the Sedra team on 2026-11-10, **open**: the team's reply of 2026-11-17 (a draft for team approval) accepts the two-week minimum and the criteria as a starting checklist, subject to agreement before launch (Q51), and promises Q52 by 2026-12-14. Not final, not scheduled, not agreed with the Sedra team |
 | Author | Nec |
 | Created | 2026-11-10 |
 | Type | Process (no consensus change of its own) |
