@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Status | **Draft, open for public comment** (since 2026-11-25); no code yet. Was an idea from 2026-11-07 to 2026-11-25. Stage 4 dropped by Nec on 2026-11-25 |
+| Status | **Draft, open for public comment** (since 2026-11-25); no code yet. Was an idea from 2026-11-07 to 2026-11-25. Stage 4 dropped and neighbour sharing added to Stage 3 by Nec on 2026-11-25 |
 | Author | Nec |
 | Discussion | [Issues of this repository](https://github.com/necatgit/sedra-sips/issues); tracking issue [necatgit/sedra-project#30](https://github.com/necatgit/sedra-project/issues/30) |
 | Created | 2026-11-07 |
@@ -184,6 +184,17 @@ together. Planned for the Rust node only; the Go node keeps its current behaviou
 they are retried with a growing pause (1 min, 2, 4 … up to 1 hour) until their record expires. This is the change that
 helps most with Sedra's few nodes: a public node that is down for a day is still known when it returns.
 
+**Sharing good neighbours with new peers** (idea by Nec, 2026-11-25, added the same day). When a peer asks for
+addresses, a node today sends a random 1000 of the up to 4096 it knows (Rust `protocol/flows/src/v5/address.rs:90-92`
+on `dev`), and the receiver stores them all alike. With thousands of dead addresses and three reachable nodes
+(2026-11-25), a reachable address is sent only about one time in four, and the new node then spends its first attempts
+on dead addresses. Change: every answer always includes the addresses this node has **verified as reachable**
+(its remembered peers and the addresses it connected to successfully in the last 24 hours), at most 250 and at most
+one per network prefix; the rest of the 1000 is filled at random as today, so new nodes still spread through gossip.
+No new message and no new field: old nodes simply receive a better list. It is not "closest first": choosing peers by
+distance can split the network into regional groups and makes an attacker nearby more effective; choosing by block
+delivery speed is what upstream's Perigee work (#796) does.
+
 **Limits against eclipse attacks** (an attacker trying to be all of a node's peers):
 - remembered peers take at most half of the outbound slots; the other half is always chosen at random;
 - one remembered peer per network prefix, so many addresses in one network count as one;
@@ -192,7 +203,8 @@ helps most with Sedra's few nodes: a public node that is down for a day is still
 - a `--reset-peer-memory` switch (like upstream's proposed `--reset-address-stores`, rusty-kaspa #812) and a log line at
   start that lists the anchors used.
 
-**Tests.** Unit: store round-trip, expiry, prefix limit, start-up order, no deletion of remembered peers. Integration
+**Tests.** Unit: store round-trip, expiry, prefix limit, start-up order, no deletion of remembered peers, verified
+addresses always present in an address answer. Integration
 (devnet, 3 to 5 nodes): after a restart with seeders blocked the node reconnects to its parents first; with all
 parents down it falls back to the address book and seeders; a node returning after 24 hours down gets its children
 back; an attacker with 100 addresses in one network gets at most one remembered slot; mixed old and new nodes stay in
@@ -217,7 +229,8 @@ connection handling can isolate a node (mitigated by tests, test network first, 
 
 **Success, measured.** On devnet/testnet: after a restart with all seeders blocked, at least 4 outbound peers within 2
 minutes when any remembered peer is up. A node that was down 24 hours has inbound peers again within 1 hour of
-returning.
+returning. A fresh node whose first peer has a book full of dead addresses reaches 8 outbound peers faster than
+today (same devnet set-up, before and after).
 
 ### Stage 4: opt-in "I am alive" announcements: dropped
 
