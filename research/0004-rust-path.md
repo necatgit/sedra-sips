@@ -4,7 +4,7 @@
 |---|---|
 | Date | 2026-11-05 |
 | Reviewed | sedrad `v2.0.0` = `4a1153d`; kaspad (Go) `v0.12.15` = `5a3b8a00`; rusty-kaspa `v1.0.1` = `fcd9c28f`, `v1.1.0`, `4edcbbcc` (v2.1.0+); zkas-rusty `f5f3c050` |
-| Full report | Raw report published later with the project repository; helper scripts in [archive/2026-11-05-0004-scripts/](archive/2026-11-05-0004-scripts/) |
+| Full report | Raw report: [2026-11-05-0004-rust-path-raw.md](https://github.com/necatgit/sedra-project/blob/main/research/archive/2026-11-05-0004-rust-path-raw.md) in the project repository (public since 2026-11-21); helper scripts in [archive/2026-11-05-0004-scripts/](archive/2026-11-05-0004-scripts/) |
 | Decision | **Rust, based on rusty-kaspa v1.0.1**, in two steps (see "Decision"). Decided 2026-11-05 by Nec |
 
 Labels: **Verified** = checked in code, with a command or data, with a reference. **Inferred** = reasoned from evidence,
@@ -103,4 +103,4 @@ contains the v5 flows (`protocol/flows/src/flow_context.rs:796`) behind `connect
 network_type() != Testnet` (`:784`); the first release tag containing `f25a737b` is `v1.1.0`; `genesis_hash.py`
 re-run gives `7c380ae690f9eaa64f300451d5e466371113c38b96ed96fe3f1e934869355ffa` for Sedra mainnet, equal to
 `genesisHash` in sedrad `domain/dagconfig/genesis.go:34-36` at `4a1153d`. Also re-checked: sedrad v2.0.0 builds and
-passes its own tests (log published later with the project repository).
+passes its own tests (log: [2026-11-05-sedrad-v2.0.0-baseline-tests.log](https://github.com/necatgit/sedra-project/blob/main/research/archive/2026-11-05-sedrad-v2.0.0-baseline-tests.log) in the project repository).

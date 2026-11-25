@@ -4,7 +4,7 @@
 |---|---|
 | Date | 2026-11-05 |
 | Reviewed | zkas-rusty `97fafeca`, rusty-kaspa `4edcbbcc` (v2.1.0), sedrad `4a1153d` (v2.0.0), PuddlePool's Miningcore `38054dec` |
-| Full report | Raw report with all file:line references and evidence; published later with the project repository |
+| Full report | Raw report with all file:line references and evidence: [2026-11-05-0002-zkas-auxpow-raw.md](https://github.com/necatgit/sedra-project/blob/main/research/archive/2026-11-05-0002-zkas-auxpow-raw.md) in the project repository (public since 2026-11-21) |
 | Review | The central claims were re-checked directly in the source; see "Review notes" |
 
 Labels: **Verified** = checked in code or data, with a reference. **Inferred** = reasoned from evidence, could be wrong.
