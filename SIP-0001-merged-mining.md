@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Status | **Draft, open for public comment** (since 2026-11-09). Not final, not scheduled, not agreed with the Sedra team |
+| Status | **Draft, open for public comment** (since 2026-11-09); reviewed by Nec 2026-11-09 (Q20, Q22, Q25, Q33 decided). Not final, not scheduled, not agreed with the Sedra team |
 | Author | Nec |
 | Created | 2026-11-05 |
 | Type | Consensus (hard fork) |

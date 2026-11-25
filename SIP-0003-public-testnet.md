@@ -70,6 +70,8 @@ passed and with Nec's explicit go. B stays our private test bench.
 | **C. A copy of mainnet's state** | Realistic balances and history | Complex (a genesis from a snapshot), and it copies real balances into a test network: not worth it |
 
 **Decided 2026-11-10 (Q47):** A, if a parity check (Go and Rust on the existing testnet with the same rules) passes; otherwise B.
+*Update 2026-11-25:* run as a fresh chain from this same `testnet-10` genesis (RUNBOOK §3.1), since nobody is known to
+run `testnet-10`; unmodified Go nodes still join with `--testnet`.
 Whatever the chain, its parameters stay those of mainnet (block rate, finality depth, rewards) so the timing of the
 ban window and the activation is tested as it will happen.
 
@@ -144,7 +146,7 @@ The IDs in brackets refer to the project's question list. Comments on any of the
 
 1. ~~Which Kaspa network is the parent?~~ Decided 2026-11-10 (Q46): Kaspa's public testnet (4.1).
 2. ~~Which Sedra test chain?~~ Decided 2026-11-10 (Q47): the existing `testnet-10` if the parity check passes,
-   otherwise a new one (4.2).
+   otherwise a new one (4.2); run as a fresh chain from the `testnet-10` genesis (update 2026-11-25, 4.2).
 3. ~~When does merged mining activate on the testnet?~~ Decided 2026-11-10 (Q48): after a native phase, announced at
    launch (4.3).
 4. ~~Who runs the infrastructure?~~ Decided 2026-11-10 (Q49): this project starts it, others are invited (4.4).

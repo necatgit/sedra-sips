@@ -15,7 +15,8 @@ Open an [issue](https://github.com/necatgit/sedra-sips/issues) or comment on an 
 and corrections are all welcome. Please name the section you refer to (for example "SIP-0001 §4.3"). Decisions taken
 after comments are recorded in the SIP itself with their date.
 
-A draft is not a decision. Nothing in these proposals is scheduled, and nothing is agreed with the Sedra team yet.
+A draft is not a decision. Nothing in these proposals is scheduled, and SIP-0001 is not agreed with the Sedra team; for SIP-0003 the
+team agreed on 2026-11-24 to run the testnet as proposed.
 
 ## Who
 

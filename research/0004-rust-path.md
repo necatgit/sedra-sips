@@ -89,6 +89,7 @@ Open questions are tracked in the project's question list under the IDs in brack
 
 *Update 2026-11-09: since this note was written, milestones M0-M8 are done and M9 (seven days next to Go nodes) runs
 until 2026-11-14; see SIP-0001 §3. The first point below describes the state on 2026-11-05.*
+*Update 2026-11-25: M9 passed on 2026-11-14.*
 
 - A Rust Sedra node does not exist yet, and nothing has been shown to sync Sedra mainnet. Compatibility is inferred from
   source code; milestones M3-M9 are the proof.
