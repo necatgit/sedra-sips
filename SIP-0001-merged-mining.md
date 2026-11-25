@@ -164,6 +164,9 @@ proposal: no premine, no developer fee.
 - Space: Kaspa allows 204 bytes of coinbase payload; about 145 remain for the pool. `SDM1` (47 bytes, base64url) and
   `ZKM1` (68 bytes, hex) together use 115 bytes, leaving about 30 bytes for the pool's own tag. With hex for Sedra it
   would have been 136 bytes and about 9 left (**Inferred**, arithmetic from verified constants, research 0002).
+  *Correction 2026-11-25:* about **24** bytes, not 30, remain with the pool software used here: PuddlePool's
+  Miningcore puts the Kaspa node's version and a dot (for example `2.1.0.`, 6 bytes) in front of the pool's own tag
+  (`KaspaJobManager.cs:1448` on branch `sedra-merged-mining` @ `1a72553a`, **Verified**). Other pool software may differ.
 - Pools need per-chain logic: a Sedra template subscription, a per-share check against Sedra's target, proof building
   and submission. PuddlePool's Miningcore supports one auxiliary chain per pool today and needs multi-aux support
   (planned milestone).
@@ -210,6 +213,11 @@ were also mutation-checked (the check removed, a test must then fail).
   merged-mined headers validates; a node without merged mining rejects merged-mined blocks and the proof.
 - **End to end:** on a local test network, a stratum miner mining through a pool (Miningcore with merged mining of
   ZKas and Sedra) produced 401 of 401 accepted merged-mined Sedra blocks, relayed to a second node.
+  *Correction 2026-11-25:* that pool merged **Sedra only**. No ZKas node ran, so a Kaspa coinbase carrying both a
+  ZKas and a Sedra commitment was **not** tested against real nodes, only in Miningcore's unit tests. Source: the
+  harness README in sedra-rusty `contrib/e2e-merged-mining/README.md` ("Not covered: ZKAS and SDR in the same
+  coinbase against real nodes") and its pool config `config.e2e.json` (one aux chain, `sedra`). The public testnet
+  now includes ZKas to show it (SIP-0003, proposed criterion 9).
 
 Full test suite of the branch: 557 passed, 0 failed. Not tested yet: anything on a public network. That is the job of
 the public testnet before any activation.

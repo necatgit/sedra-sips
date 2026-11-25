@@ -40,6 +40,11 @@ activation date together with the Sedra team.
 6. Wallets: the Go `sedrawallet` sends and receives (tested on devnet 2026-11-10, repeated here in public).
 7. At least one participant outside this project runs a node or mines, and reports what they saw.
 8. At least two weeks after activation without a consensus failure. Every problem found is fixed and re-tested.
+9. *Proposed addition (2026-11-25, Nec), not part of the eight criteria the Sedra team accepted:* one Kaspa
+   testnet-10 coinbase carries both a ZKas and a Sedra commitment, as the mainnet pool would after activation. Both
+   auxiliary chains accept blocks from the same parent work, neither commitment disturbs the other, and no share is
+   credited twice. ZKas runs as a private test chain for the testnet pool only. Reason: this combination was never
+   tested against real nodes (SIP-0001 §9, correction of 2026-11-25).
 
 ## 4. Decisions
 
