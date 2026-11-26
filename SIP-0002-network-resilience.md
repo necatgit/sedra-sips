@@ -60,7 +60,7 @@ open P2P port can connect out, but nobody can connect to them. Opening a Go node
 
 | Stage | What | Consensus change | Node release needed | Earliest start |
 |---|---|---|---|---|
-| 1 | The VPS as this project's main public node + seeder records + a guide for operators | No | No | After the testnet report (~2026-12-21) |
+| 1 | The VPS as this project's main public node + seeder records + a guide for operators | No | No | After the testnet report (~2026-12-17) |
 | 2 | More seeders and fallback peers in the node code, with listing rules | No | Yes (both nodes) | When Stage 1 runs and there are operators |
 | 3 | Peer memory ("parents and children") in the Rust node | No | Yes (Rust node) | Design now; code after the testnet |
 | 4 | Opt-in "I am alive" announcements | — | — | **Dropped** (Nec, 2026-11-25; see Stage 4) |
@@ -73,7 +73,7 @@ No dates are promised. "Earliest start" is the first moment the stage can begin,
 
 1. **The rented VPS becomes this project's main public mainnet node** after the public testnet (Nec, 2026-11-26; the
    draft of 2026-11-25 called it a second node). It runs the testnet seed
-   until the testnet report (~2026-12-21, [testnet/HOSTING.md](https://github.com/necatgit/sedra-project/blob/main/testnet/HOSTING.md)); after that it also runs the
+   until the testnet report (~2026-12-17, *updated 2026-11-26:* was ~12-21; [testnet/HOSTING.md](https://github.com/necatgit/sedra-project/blob/main/testnet/HOSTING.md)); after that it also runs the
    released Rust node (`sedra-rusty` mainnet release, currently 0.1.1) as a P2P node:
    - P2P **TCP 22111 open**, RPC 22110 on localhost only, no mining (the host's terms forbid it), no wallet, no keys.
    - `--utxoindex` off unless needed; resources measured 2026-11-24: 3.0 GB data, 2.2 GiB memory, which fits the VPS
@@ -110,7 +110,7 @@ paths open. The seeder records depend on the team acting
 **Effort (Inferred).** VPS setup half a day (the hardening and the testnet node already exist); guide half a day;
 monitoring a few hours. Ongoing: updates with each node release.
 
-**Who acts.** Nec: VPS role decided 2026-11-26 (main public node); confirm the start at the ~12-21 testnet review,
+**Who acts.** Nec: VPS role decided 2026-11-26 (main public node); confirm the start at the ~12-17 testnet review,
 send the addresses. Claude: set-up, monitoring, guide.
 Sedra team: add the records (A11 and the new item). Operators: run nodes.
 
