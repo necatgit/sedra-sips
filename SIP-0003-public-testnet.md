@@ -85,6 +85,10 @@ ban window and the activation is tested as it will happen.
 **Decided 2026-11-10 (Q48):** B, with the activation score announced at launch, the same way it would be announced on
 mainnet. The announcement should come from the Sedra team if they are willing (asked together with Q51, open).
 *Update 2026-11-26:* the Sedra team announced the start on its channels on 2026-11-26 ([#13](https://github.com/necatgit/sedra-project/issues/13#issuecomment-7192048626)).
+*Update 2026-11-26 (evening):* the chain starts on 2026-11-27, four days before the announced 2026-12-01, so that
+merged mining activates on that day. The native phase and the ban start still happen before activation, with the
+activation score published in the release and the announcement; anyone can join during the native phase, but the
+public announcement points at the activation day rather than at the chain start.
 
 ### 4.4 Who runs the infrastructure? (Q49)
 
