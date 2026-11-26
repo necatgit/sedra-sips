@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Status | **Draft, open for public comment** (since 2026-11-17). Q46-Q50 decided by Nec 2026-11-10; Q51 and Q52 asked to the Sedra team on 2026-11-10, **open**: the team's reply of 2026-11-17 (a draft for team approval) accepts the two-week minimum and the criteria as a starting checklist, subject to agreement before launch (Q51), and promises Q52 by 2026-12-14. *Update 2026-11-25:* the Sedra team agreed in writing on 2026-11-24 to run the testnet under this SIP as it stands, on a fresh chain (Q51 answered; Q52 no longer a condition). Not final; the mainnet change (SIP-0001) is not agreed |
+| Status | **Draft, open for public comment** (since 2026-11-17). Q46-Q50 decided by Nec 2026-11-10. Q51 answered: the Sedra team agreed in writing on 2026-11-24 to run the testnet under this SIP as it stands, on a fresh chain (so Q52 is no longer a condition). The testnet starts **Tue 2026-12-01**, announced by the Sedra team on 2026-11-26 ([#13](https://github.com/necatgit/sedra-project/issues/13#issuecomment-7192048626)). Not final; the mainnet change (SIP-0001) is not agreed |
 | Author | Nec |
 | Created | 2026-11-10 |
 | Type | Process (no consensus change of its own) |
@@ -84,6 +84,7 @@ ban window and the activation is tested as it will happen.
 
 **Decided 2026-11-10 (Q48):** B, with the activation score announced at launch, the same way it would be announced on
 mainnet. The announcement should come from the Sedra team if they are willing (asked together with Q51, open).
+*Update 2026-11-26:* the Sedra team announced the start on its channels on 2026-11-26 ([#13](https://github.com/necatgit/sedra-project/issues/13#issuecomment-7192048626)).
 
 ### 4.4 Who runs the infrastructure? (Q49)
 
@@ -119,7 +120,9 @@ section 3, as the starting point; the Sedra team may change the duration and the
 report; the mainnet activation date is chosen with the Sedra team only after that report (SIP-0001 §5, Q33). A serious
 problem means fix, new testnet release and, if needed, a reset and a new activation on the testnet.
 
-**Open:** no answer from the Sedra team yet (as of 2026-11-16).
+**Open:** no answer from the Sedra team yet (as of 2026-11-16). *Update 2026-11-26:* answered on 2026-11-24: the
+Sedra team agreed to the two-week minimum and the eight criteria as they stand (QUESTIONS.md Q51), and confirmed
+it on [#13](https://github.com/necatgit/sedra-project/issues/13#issuecomment-7192048626) on 2026-11-26.
 
 ## 5. Rough timeline (Inferred, depends on the decisions)
 
@@ -131,11 +134,15 @@ problem means fix, new testnet release and, if needed, a reset and a new activat
 | Launch, then activation a few days later | |
 | Two weeks of running after activation, report | roughly mid to late December 2026 |
 
+*Update 2026-11-26:* release published 2026-11-25; launch Tue 2026-12-01; activation at DAA 345,600, about
+2026-12-05; report about 2026-12-21 (**Inferred** from the block rate).
+
 ## 6. Costs and risks
 
 - **Machines:** at least one more VM for testnet nodes and pool (all pool VMs share one host today, so "two nodes" on
   it are not independent; a second location would be better). A Kaspa testnet node needs disk space (**Unknown** how
-  much; to be measured).
+  much; to be measured). *Update 2026-11-26:* a second location was rented (seed2 on an EU VPS); the Kaspa testnet-10
+  node used 66 GB of disk after its sync on 2026-11-25.
 - **Production stays separate:** the testnet pool, nodes and wallets never share a machine role, database or wallet
   with the production pool. Option C in 4.1 is the only exception and needs its own decision.
 - **Attention:** a public testnet invites people to break it. That is the point, but reports need answers.
@@ -151,9 +158,11 @@ The IDs in brackets refer to the project's question list. Comments on any of the
    launch (4.3).
 4. ~~Who runs the infrastructure?~~ Decided 2026-11-10 (Q49): this project starts it, others are invited (4.4).
 5. ~~How do outsiders join?~~ Decided 2026-11-10 (Q50): release, guide, pool, issues (4.5).
-6. How long does the testnet run and what counts as passed? (Q51) Proposed in 4.6; asked to the Sedra team, open.
+6. ~~How long does the testnet run and what counts as passed?~~ Answered 2026-11-24 (Q51): the Sedra team agreed to
+   4.6 and section 3 as they stand.
 7. Does anyone run Sedra's existing testnet, and do its rules match mainnet's v2.0.0 rules? (Q52) Asked to the Sedra
-   team, open; the rules part is also checked by the parity check (4.2).
+   team, open; the rules part is also checked by the parity check (4.2). *Update 2026-11-26:* no longer a condition
+   (fresh chain); stays open as information.
 
 ## Disclosure
 
@@ -163,5 +172,6 @@ testnet itself creates nothing of value for anyone, Nec included.
 ## What this does NOT mean
 
 - It does not schedule merged mining on mainnet. The mainnet date comes after the testnet, agreed with the Sedra team.
-- It does not mean the Sedra team or any pool has agreed to take part.
+- It does not mean any pool has agreed to take part. (*Corrected 2026-11-26:* this line also named the Sedra team;
+  the team agreed on 2026-11-24 to run the testnet. That is not agreement to SIP-0001 on mainnet.)
 - Testnet coins have no value and never will.
