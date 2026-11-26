@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Status | **Draft, open for public comment** (since 2026-11-25); no code yet. Was an idea from 2026-11-07 to 2026-11-25. Stage 4 dropped and neighbour sharing added to Stage 3 by Nec on 2026-11-25 |
+| Status | **Draft, open for public comment** (since 2026-11-25); no code yet. Was an idea from 2026-11-07 to 2026-11-25. Stage 4 dropped and neighbour sharing added to Stage 3 by Nec on 2026-11-25; the VPS made the main public node (Stage 1) by Nec on 2026-11-26 |
 | Author | Nec |
 | Discussion | [Issues of this repository](https://github.com/necatgit/sedra-sips/issues); tracking issue [necatgit/sedra-project#30](https://github.com/necatgit/sedra-project/issues/30) |
 | Created | 2026-11-07 |
@@ -60,18 +60,19 @@ open P2P port can connect out, but nobody can connect to them. Opening a Go node
 
 | Stage | What | Consensus change | Node release needed | Earliest start |
 |---|---|---|---|---|
-| 1 | A second independent public node + seeder records + a guide for operators | No | No | After the testnet report (~2026-12-21) |
+| 1 | The VPS as this project's main public node + seeder records + a guide for operators | No | No | After the testnet report (~2026-12-21) |
 | 2 | More seeders and fallback peers in the node code, with listing rules | No | Yes (both nodes) | When Stage 1 runs and there are operators |
 | 3 | Peer memory ("parents and children") in the Rust node | No | Yes (Rust node) | Design now; code after the testnet |
 | 4 | Opt-in "I am alive" announcements | — | — | **Dropped** (Nec, 2026-11-25; see Stage 4) |
 
 No dates are promised. "Earliest start" is the first moment the stage can begin, not a plan to finish.
 
-### Stage 1: a second independent node, seeder records, a guide (operations only)
+### Stage 1: the VPS as the main public node, seeder records, a guide (operations only)
 
 **What.**
 
-1. **The rented VPS becomes an independent public mainnet node** after the public testnet. It runs the testnet seed
+1. **The rented VPS becomes this project's main public mainnet node** after the public testnet (Nec, 2026-11-26; the
+   draft of 2026-11-25 called it a second node). It runs the testnet seed
    until the testnet report (~2026-12-21, [testnet/HOSTING.md](https://github.com/necatgit/sedra-project/blob/main/testnet/HOSTING.md)); after that it also runs the
    released Rust node (`sedra-rusty` mainnet release, currently 0.1.1) as a P2P node:
    - P2P **TCP 22111 open**, RPC 22110 on localhost only, no mining (the host's terms forbid it), no wallet, no keys.
@@ -83,10 +84,15 @@ No dates are promised. "Earliest start" is the first moment the stage can begin,
      the minimum term is decided separately.
    - Different hardware, network and country from the home node and from the pool, so this is the first node of this
      project that is independent hardware, not only an independent node ([ROADMAP](https://github.com/necatgit/sedra-project/blob/main/ROADMAP.md) Phase 2 open item).
+   - **Main** means: its address is the one this project gives out first for new nodes (seeder records, fallback
+     lists in Stage 2, the guide). It runs in a data centre with a fixed address, so it does not depend on a home
+     connection, and it is at a different provider from the two current fallback peers. The home Rust node stays
+     public as a second node. The pool and the node it mines on stay at home: the host's terms forbid mining, and a
+     pool needs its node close by.
 2. **Ask the Sedra team to put independent nodes into the seeder records.** `sedra-seed-2` and `sedra-seed-3` are
    empty. The team already accepted in principle (reply draft of 2026-11-23, letter item A11) to add this project's
    home Rust node as an extra peer after their check; this project sends the address. Stage 1 adds a second request:
-   after the testnet, add the VPS node too. Proposed for the next version of the open-items letter, not sent yet.
+   after the testnet, add the VPS node as the main entry. Proposed for the next version of the open-items letter, not sent yet.
    Goal: each of the three seeder names returns at least one working address, and not all of them at one operator.
 3. **A short guide "Run a public Sedra node"** (appendix A below) that invites community operators, with an issue
    where an operator can say "my node is public" so it can be measured and later listed (Stage 2).
@@ -96,13 +102,16 @@ longer cuts new nodes off.
 
 **Risks.** A public node is a target for connection floods (mitigated: the Rust node, firewall with only the needed
 ports, no RPC exposed). Both of this project's nodes are run by one person, so they add independence from the team,
-not independence from Nec; more operators are needed for that (Q40). The seeder records depend on the team acting
+not independence from Nec; more operators are needed for that (Q40). Making one VPS the main entry point puts
+much weight on one machine and one provider; the home node, the fallback peers and the Stage 2 seeders keep other
+paths open. The seeder records depend on the team acting
 (A11 still open on 2026-11-25).
 
 **Effort (Inferred).** VPS setup half a day (the hardening and the testnet node already exist); guide half a day;
 monitoring a few hours. Ongoing: updates with each node release.
 
-**Who acts.** Nec: decide the VPS role at the ~12-21 review, send the addresses. Claude: set-up, monitoring, guide.
+**Who acts.** Nec: VPS role decided 2026-11-26 (main public node); confirm the start at the ~12-21 testnet review,
+send the addresses. Claude: set-up, monitoring, guide.
 Sedra team: add the records (A11 and the new item). Operators: run nodes.
 
 **Success, measured.** (a) The network map shows at least 2 reachable nodes that are neither the team's nor on one
@@ -261,8 +270,10 @@ nodes. Release binaries with checksums exist since v0.1.0; packages and a Docker
 
 - No consensus rules, no coins, no fork. Every stage is node software or operations; old and new nodes keep working
   together.
-- A draft is not a decision. No stage has a date. Stage 1 needs Nec's decision on the VPS role at the testnet review and
-  the Sedra team's action on the seeder records; neither has happened (2026-11-25).
+- A draft is not a decision. No stage has a date. Nec decided on 2026-11-26 that the VPS becomes the main public node;
+  it starts after the testnet report at the earliest, and the seeder records still need the Sedra team's action (not
+  done on 2026-11-26). "Main" means the first address given out, not a node with special rights: every Sedra node is
+  equal on the network.
 - More public nodes run by this project make Sedra less dependent on the team's servers, not on one person: two of the
   planned nodes are Nec's. Real resilience needs other operators (Q40).
 - The fallback peers are not said to be bad. Their sync completeness is an open question (Q5) that the team promised to
