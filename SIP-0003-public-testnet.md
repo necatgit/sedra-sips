@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Status | **Draft, open for public comment** (since 2026-11-17). Q46-Q50 decided by Nec 2026-11-10. Q51 answered: the Sedra team agreed in writing on 2026-11-24 to run the testnet under this SIP as it stands, on a fresh chain (so Q52 is no longer a condition). The Sedra team announced **Tue 2026-12-01** as the start on 2026-11-26 ([#13](https://github.com/necatgit/sedra-project/issues/13#issuecomment-7192048626)); the chain starts on 2026-11-27 10:00 UTC so that merged mining activates about that day. Not final; the mainnet change (SIP-0001) is not agreed |
+| Status | **Draft, open for public comment** (since 2026-11-17). Q46-Q50 decided by Nec 2026-11-10. Q51 answered: the Sedra team agreed in writing on 2026-11-24 to run the testnet under this SIP as it stands, on a fresh chain (so Q52 is no longer a condition). The Sedra team announced **Tue 2026-12-01** as the start on 2026-11-26 ([#13](https://github.com/necatgit/sedra-project/issues/13#issuecomment-7192048626)); the chain started on 2026-11-27 10:00 UTC (running since then) so that merged mining activates about that day. Not final; the mainnet change (SIP-0001) is not agreed |
 | Author | Nec |
 | Created | 2026-11-10 |
 | Type | Process (no consensus change of its own) |
